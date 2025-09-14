@@ -7,9 +7,29 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rclcpp_action REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+
+add_executable(square_mecanum_controller
+  src/square_mecanum_controller.cpp
+)
+
+ament_target_dependencies(square_mecanum_controller
+  rclcpp
+  geometry_msgs
+  std_msgs
+)
+
+install(TARGETS
+  square_mecanum_controller
+  #mecanum_parameters_node
+  #timed_rotation_action_server
+  #timed_rotation_action_client
+  #set_cleaning_state_service
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
