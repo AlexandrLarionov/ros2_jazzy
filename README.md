@@ -1,4 +1,4 @@
-# yahboom_rosmaster #
+# Yahboom robot navigation #
  
 This package contains mobile robot navigation fot yahboom robot.
  
