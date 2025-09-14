@@ -1,10 +1,10 @@
 # yahboom_rosmaster #
  
-This package contains examples demonstrating yahboom robot simulation.
+This package contains mobile robot navigation fot yahboom robot.
  
 ## Description
  
-The package includes minimalist ROS 2 code to demonstrate yahboom robot examples
+The package includes ROS 2 code for yahboom robot navigation 
  
 ## Prerequisites
  
