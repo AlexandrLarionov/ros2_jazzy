@@ -40,6 +40,10 @@ add_executable(timed_rotation_action_server
 add_executable(timed_rotation_action_client
   src/timed_rotation_action_client.cpp
 )
+
+add_executable(set_cleaning_state_service
+  src/set_cleaning_state_service.cpp
+)
  
 # Specify dependencies for the target
 ament_target_dependencies(square_mecanum_controller
@@ -71,6 +75,12 @@ ament_target_dependencies(timed_rotation_action_client
   std_msgs
   yahboom_rosmaster_msgs
 )
+
+# Specify dependencies for the cleaning state srevice action
+ament_target_dependencies(set_cleaning_state_service
+  rclcpp
+  yahboom_rosmaster_msgs
+)
  
 # Install the executables
 install(TARGETS
@@ -78,6 +88,7 @@ install(TARGETS
   mecanum_parameters_node
   timed_rotation_action_server
   timed_rotation_action_client
+  set_cleaning_state_service
   DESTINATION lib/${PROJECT_NAME}
 )
  
