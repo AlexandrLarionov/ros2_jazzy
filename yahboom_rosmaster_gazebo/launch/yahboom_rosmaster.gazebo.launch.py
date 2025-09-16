@@ -3,10 +3,7 @@
 Launch Gazebo simulation with a robot.
 
 This launch file sets up a complete ROS 2 simulation environment with Gazebo for
-a Yahboom ROSMASTER robot: https://github.com/YahboomTechnology
-
-:author: Addison Sears-Collins
-:date: November 21, 2024
+a Yahboom ROSMASTER robot: https://github.com/YahboomTechnology=
 """
 
 import os

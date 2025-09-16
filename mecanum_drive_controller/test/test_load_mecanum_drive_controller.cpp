@@ -10,10 +10,7 @@
  *     - Initializes ROS 2
  *     - Creates a controller manager
  *     - Attempts to load the mecanum drive controller
- *     - Verifies no exceptions are thrown during loading
- *
- * @author Addison Sears-Collins
- * @date November 19, 2024
+ *     - Verifies no exceptions are thrown during loadings
  */
 
 // Google Mock for testing

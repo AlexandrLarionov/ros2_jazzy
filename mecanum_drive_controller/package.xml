@@ -8,9 +8,6 @@
 
   <license>BSD-3-Clause</license>
 
-  <url type="website">https://automaticaddison.com</url>
-  <url type="repository">https://github.com/automaticaddison</url>
-
   <buildtool_depend>ament_cmake</buildtool_depend>
   <build_depend>generate_parameter_library</build_depend>
 

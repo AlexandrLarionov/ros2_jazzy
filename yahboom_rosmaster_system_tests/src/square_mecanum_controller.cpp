@@ -10,9 +10,6 @@
  * Publishing Topics:
  *     /mecanum_drive_controller/cmd_vel (geometry_msgs/TwistStamped):
  *         Velocity commands for the robot's motion
- *
- * @author Addison Sears-Collins
- * @date November 22, 2024
  */
 
 #include <chrono>

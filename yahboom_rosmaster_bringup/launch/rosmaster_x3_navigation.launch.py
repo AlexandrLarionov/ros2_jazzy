@@ -3,9 +3,6 @@
 Launch Nav2 for the Yahboom ROSMASTER X3 robot in Gazebo.
 
 This launch file sets up a complete ROS 2 navigation environment.
-
-:author: Addison Sears-Collins
-:date: December 10, 2024
 """
 
 from launch import LaunchDescription
