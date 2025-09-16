@@ -36,8 +36,8 @@ def generate_launch_description():
     rviz_config_file_path = 'rviz/nav2_default_view.rviz'
 
     # Set the path to different packages
-    pkg_share_docking = FindPackageShare(
-        package=package_name_docking).find(package_name_docking)
+    #pkg_share_docking = FindPackageShare(
+    #    package=package_name_docking).find(package_name_docking)
     pkg_share_gazebo = FindPackageShare(package=package_name_gazebo).find(package_name_gazebo)
     pkg_share_localization = FindPackageShare(
         package=package_name_localization).find(package_name_localization)
@@ -45,8 +45,8 @@ def generate_launch_description():
         package=package_name_navigation).find(package_name_navigation)
 
     # Set default paths
-    default_apriltag_launch_path = PathJoinSubstitution(
-        [pkg_share_docking, apriltag_launch_file_path])
+    #default_apriltag_launch_path = PathJoinSubstitution(
+    #    [pkg_share_docking, apriltag_launch_file_path])
     default_gazebo_launch_path = PathJoinSubstitution([pkg_share_gazebo, gazebo_launch_file_path])
     default_ekf_launch_path = PathJoinSubstitution([pkg_share_localization, ekf_launch_file_path])
     default_ekf_config_path = PathJoinSubstitution([pkg_share_localization, ekf_config_file_path])
@@ -248,13 +248,13 @@ def generate_launch_description():
         description='Use simulation (Gazebo) clock if true')
 
     # Specify the actions
-    start_apriltag_dock_cmd = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([default_apriltag_launch_path]),
-        launch_arguments={
-            'use_sim_time': use_sim_time,
-            'camera_namespace': camera_namespace
-        }.items()
-    )
+   # start_apriltag_dock_cmd = IncludeLaunchDescription(
+    #    PythonLaunchDescriptionSource([default_apriltag_launch_path]),
+     #   launch_arguments={
+      #      'use_sim_time': use_sim_time,
+       #     'camera_namespace': camera_namespace
+        #}.items()
+    #)
 
     start_assisted_teleop_cmd = Node(
         package='yahboom_rosmaster_navigation',
@@ -335,20 +335,20 @@ def generate_launch_description():
 
     # Add all launch arguments
     # Config and launch files
-    ld.add_action(declare_autostart_cmd)
-    ld.add_action(declare_camera_namespace_cmd)
+    #ld.add_action(declare_autostart_cmd)
+    #ld.add_action(declare_camera_namespace_cmd)
     ld.add_action(declare_enable_odom_tf_cmd)
     ld.add_action(declare_ekf_config_file_cmd)
     ld.add_action(declare_ekf_launch_file_cmd)
     ld.add_action(declare_gazebo_launch_file_cmd)
-    ld.add_action(declare_map_yaml_cmd)
-    ld.add_action(declare_namespace_cmd)
-    ld.add_action(declare_nav2_params_file_cmd)
+    #ld.add_action(declare_map_yaml_cmd)
+    #ld.add_action(declare_namespace_cmd)
+    #ld.add_action(declare_nav2_params_file_cmd)
     ld.add_action(declare_rviz_config_file_cmd)
-    ld.add_action(declare_slam_cmd)
-    ld.add_action(declare_use_composition_cmd)
-    ld.add_action(declare_use_namespace_cmd)
-    ld.add_action(declare_use_respawn_cmd)
+    #ld.add_action(declare_slam_cmd)
+    #ld.add_action(declare_use_composition_cmd)
+    #ld.add_action(declare_use_namespace_cmd)
+    #ld.add_action(declare_use_respawn_cmd)
 
     # Robot configuration
     ld.add_action(declare_robot_name_cmd)
@@ -374,12 +374,12 @@ def generate_launch_description():
     ld.add_action(declare_use_sim_time_cmd)
 
     # Add any actions
-    ld.add_action(start_apriltag_dock_cmd)
-    ld.add_action(start_assisted_teleop_cmd)
-    ld.add_action(start_cmd_vel_relay_cmd)
+    #ld.add_action(start_apriltag_dock_cmd)
+    #ld.add_action(start_assisted_teleop_cmd)
+    #ld.add_action(start_cmd_vel_relay_cmd)
     ld.add_action(start_ekf_cmd)
     ld.add_action(start_gazebo_cmd)
-    ld.add_action(start_nav_to_pose_cmd)
-    ld.add_action(start_ros2_navigation_cmd)
+    #ld.add_action(start_nav_to_pose_cmd)
+    #ld.add_action(start_ros2_navigation_cmd)
 
     return ld
