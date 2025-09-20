@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(yahboom_rosmaster_gazebo)
+project(yahboom_rosmaster_navigation)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -7,22 +7,19 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(controller_manager REQUIRED)
-find_package(gz_ros2_control REQUIRED)
+find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(ros_gz REQUIRED)
-find_package(ros_gz_bridge REQUIRED)
-find_package(ros_gz_image REQUIRED)
-find_package(ros_gz_sim REQUIRED)
-find_package(ros2_control REQUIRED)
-find_package(ros2_controllers REQUIRED)
-find_package(trajectory_msgs REQUIRED)
-find_package(xacro REQUIRED)
+find_package(rclpy REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(navigation2 REQUIRED)
+find_package(nav2_bringup REQUIRED)
+find_package(slam_toolbox REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(tf2_ros REQUIRED)
 
-# Copy necessary files to designated locations in the project
-install (
-  DIRECTORY launch rviz config models worlds
-  DESTINATION share/${PROJECT_NAME}
+install(
+  DIRECTORY rviz
+  DESTINATION share/${PROJECT_NAME} 
 )
 
 if(BUILD_TESTING)
