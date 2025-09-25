@@ -1,4 +1,4 @@
-# Yahboom robot navigation #
+# Yahboom робот с mecanum колесами #
  
 This package contains mobile robot navigation fot yahboom robot.
  
