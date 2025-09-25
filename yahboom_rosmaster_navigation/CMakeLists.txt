@@ -29,9 +29,12 @@ install(TARGETS
 )
 
 install(
-  DIRECTORY rviz maps config
+  DIRECTORY config rviz maps
   DESTINATION share/${PROJECT_NAME} 
 )
+
+# Install Python modules
+#ament_python_install_package(${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -44,5 +47,5 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
-
+ 
 ament_package()

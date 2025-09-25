@@ -5,18 +5,17 @@ cleanup() {
     echo "Cleaning up..."
     sleep 5.0
     pkill -9 -f "ros2|gazebo|gz|nav2|amcl|bt_navigator|nav_to_pose|rviz2|assisted_teleop|cmd_vel_relay|robot_state_publisher|joint_state_publisher|move_to_free|mqtt|autodock|cliff_detection|moveit|move_group|basic_navigator"
-
 }
 
 # Set up cleanup trap
 trap 'cleanup' SIGINT SIGTERM
 
 # Check if SLAM argument is provided
-#if [ "$1" = "slam" ]; then
- #   SLAM_ARG="slam:=True"
-#else
- #   SLAM_ARG="slam:=False"
-#fi
+if [ "$1" = "slam" ]; then
+   SLAM_ARG="slam:=True"
+else
+   SLAM_ARG="slam:=False"
+fi
 
 # For cafe.world -> z:=0.20
 # For house.world -> z:=0.05
@@ -36,9 +35,9 @@ ros2 launch yahboom_rosmaster_bringup rosmaster_x3_navigation.launch.py \
     z:=0.20 \
     roll:=0.0 \
     pitch:=0.0 \
-    yaw:=0.0 & #\
-    #"$SLAM_ARG" \
-    #map:=/home/ubuntu/ros2_ws/src/yahboom_rosmaster/yahboom_rosmaster_navigation/maps/cafe_world_map.yaml &
+    yaw:=0.0  \
+    "$SLAM_ARG" \
+    map:=/home/ubuntu/ros2_ws/src/yahboom_rosmaster/yahboom_rosmaster_navigation/maps/cafe_world_map.yaml &
 
 echo "Waiting 25 seconds for simulation to initialize..."
 sleep 25
