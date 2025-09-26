@@ -17,7 +17,6 @@ The package includes ROS 2 code for yahboom robot navigation
 Larionov Alex
 
 
-
 ## How to run 
 
 
