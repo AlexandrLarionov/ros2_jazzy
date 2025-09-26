@@ -1,10 +1,18 @@
 {
   "python.autoComplete.extraPaths": [
+<<<<<<< HEAD
     "/home/ubuntu/ros2_ws/install/yahboom_rosmaster_msgs/lib/python3.12/site-packages",
     "/opt/ros/jazzy/lib/python3.12/site-packages"
   ],
   "python.analysis.extraPaths": [
     "/home/ubuntu/ros2_ws/install/yahboom_rosmaster_msgs/lib/python3.12/site-packages",
+=======
+    "/home/ubuntu/ros2_ws/install/ros2_fundamentals_examples/lib/python3.12/site-packages",
+    "/opt/ros/jazzy/lib/python3.12/site-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/ubuntu/ros2_ws/install/ros2_fundamentals_examples/lib/python3.12/site-packages",
+>>>>>>> 647c4982a502a8f32db38e69402ce2a140d11e76
     "/opt/ros/jazzy/lib/python3.12/site-packages"
   ]
 }

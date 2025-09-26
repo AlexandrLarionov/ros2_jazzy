@@ -6,10 +6,18 @@
         "limitSymbolsToIncludedHeaders": false
       },
       "includePath": [
+<<<<<<< HEAD
         "/home/ubuntu/ros2_ws/install/yahboom_rosmaster_msgs/include/**",
         "/home/ubuntu/ros2_ws/install/mecanum_drive_controller/include/**",
         "/opt/ros/jazzy/include/**",
         "/home/ubuntu/ros2_ws/src/yahboom_rosmaster/mecanum_drive_controller/include/**",
+=======
+        "/home/ubuntu/ros2_ws/install/ros2_fundamentals_examples/include/**",
+        "/opt/ros/jazzy/include/**",
+        "/home/ubuntu/ros2_ws/src/ros2_fundamentals_examples/include/**",
+        "/home/ubuntu/ros2_ws/src/yahboom_rosmaster/yahboom_rosmaster/include/**",
+        "/home/ubuntu/ros2_ws/src/yahboom_rosmaster/yahboom_rosmaster_description/include/**",
+>>>>>>> 647c4982a502a8f32db38e69402ce2a140d11e76
         "/usr/include/**"
       ],
       "name": "ROS",
