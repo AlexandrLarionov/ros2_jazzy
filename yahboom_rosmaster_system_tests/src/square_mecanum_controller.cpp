@@ -82,12 +82,12 @@ private:
         publisher_->publish(msg);
 
         // Update time tracking
-        elapsed_time_ += 0.2;  // 200ms in seconds
+        elapsed_time_ += 0.2;
 
         // Check if we've completed the current side
         if (elapsed_time_ >= time_per_side_) {
             elapsed_time_ = 0.0;
-            current_side_ = (current_side_ + 1) % 4;  // Move to next side (0-3)
+            current_side_ = (current_side_ + 1) % 4;
         }
     }
 
