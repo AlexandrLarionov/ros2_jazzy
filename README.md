@@ -8,7 +8,7 @@
 
 ![Фотография робота Mecanum](photo/screen_2.png)
 
-![Фотография rqt graph](photo/frame.jpg)
+![Фотография rqt graph](photo/frames.jpg)
 
 
 ##  Запуск проекта
